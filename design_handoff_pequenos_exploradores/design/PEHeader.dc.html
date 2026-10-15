@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Playpen+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></helmet>
+<sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+<header style="position:relative;width:100%;height:100px;font-family:'Lilita One',sans-serif;color:#0F2E22">
+  <a href="#inicio" style="position:absolute;left:51px;top:20px;display:flex;align-items:flex-start;gap:27px;text-decoration:none;color:#0F2E22">
+    <img src="../assets/logo.png" alt="Pequeños Exploradores" style="width:94px;height:auto;display:block">
+    <span style="display:block;margin-top:2px;font-size:35px;line-height:32px;letter-spacing:0">PEQUEÑOS<br>EXPLORADORES</span>
+  </a>
+  <nav style="position:absolute;right:42px;top:29px;display:flex;gap:4px">
+    <sc-if value="{{ aInicio }}"><a href="#inicio" style="height:48px;padding:0 23px;border-radius:999px;background:#FFCD33;font-size:22px;line-height:48px;color:#0F2E22;text-decoration:none">INICIO</a></sc-if>
+    <sc-if value="{{ nInicio }}" hint-placeholder-val="{{ true }}"><a href="#inicio" style="height:48px;padding:0 23px;border-radius:999px;font-size:22px;line-height:48px;color:#0F2E22;text-decoration:none" style-hover="background:#FCF3D9">INICIO</a></sc-if>
+    <sc-if value="{{ aAprende }}"><a href="#aprende" style="height:48px;padding:0 23px;border-radius:999px;background:#FFCD33;font-size:22px;line-height:48px;color:#0F2E22;text-decoration:none">APRENDE</a></sc-if>
+    <sc-if value="{{ nAprende }}" hint-placeholder-val="{{ true }}"><a href="#aprende" style="height:48px;padding:0 23px;border-radius:999px;font-size:22px;line-height:48px;color:#0F2E22;text-decoration:none" style-hover="background:#FCF3D9">APRENDE</a></sc-if>
+    <sc-if value="{{ aJuegos }}"><a href="#juegos" style="height:48px;padding:0 23px;border-radius:999px;background:#FFCD33;font-size:22px;line-height:48px;color:#0F2E22;text-decoration:none">JUEGOS</a></sc-if>
+    <sc-if value="{{ nJuegos }}" hint-placeholder-val="{{ true }}"><a href="#juegos" style="height:48px;padding:0 23px;border-radius:999px;font-size:22px;line-height:48px;color:#0F2E22;text-decoration:none" style-hover="background:#FCF3D9">JUEGOS</a></sc-if>
+    <sc-if value="{{ aContacto }}"><a href="#contacto" style="height:48px;padding:0 23px;border-radius:999px;background:#FFCD33;font-size:22px;line-height:48px;color:#0F2E22;text-decoration:none">CONTACTO</a></sc-if>
+    <sc-if value="{{ nContacto }}" hint-placeholder-val="{{ true }}"><a href="#contacto" style="height:48px;padding:0 23px;border-radius:999px;font-size:22px;line-height:48px;color:#0F2E22;text-decoration:none" style-hover="background:#FCF3D9">CONTACTO</a></sc-if>
+  </nav>
+</header>
+</sc-if>
+<sc-if value="{{ isMobile }}">
+<header style="position:relative;width:100%;height:80px;font-family:'Lilita One',sans-serif;color:#0F2E22">
+  <a href="#inicio" style="position:absolute;left:16px;top:14px;display:flex;align-items:center;gap:10px;text-decoration:none;color:#0F2E22">
+    <img src="../assets/logo.png" alt="Pequeños Exploradores" style="width:56px;height:auto;display:block">
+    <span style="display:block;font-size:20px;line-height:19px">PEQUEÑOS<br>EXPLORADORES</span>
+  </a>
+  <sc-if value="{{ closed }}" hint-placeholder-val="{{ true }}">
+    <button aria-label="Abrir menú" style="position:absolute;right:16px;top:16px;width:48px;height:48px;border:0;border-radius:16px;background:#FFCD33;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;cursor:pointer">
+      <span style="display:block;width:22px;height:3.5px;border-radius:2px;background:#0F2E22"></span>
+      <span style="display:block;width:22px;height:3.5px;border-radius:2px;background:#0F2E22"></span>
+      <span style="display:block;width:22px;height:3.5px;border-radius:2px;background:#0F2E22"></span>
+    </button>
+  </sc-if>
+  <sc-if value="{{ open }}">
+    <button aria-label="Cerrar menú" style="position:absolute;right:16px;top:16px;width:48px;height:48px;border:3px solid #0F2E22;box-sizing:border-box;border-radius:16px;background:#FFF8EE;padding:0;cursor:pointer">
+      <span style="position:absolute;left:10px;top:19px;width:22px;height:3.5px;border-radius:2px;background:#0F2E22;transform:rotate(45deg)"></span>
+      <span style="position:absolute;left:10px;top:19px;width:22px;height:3.5px;border-radius:2px;background:#0F2E22;transform:rotate(-45deg)"></span>
+    </button>
+  </sc-if>
+</header>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:100},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;inicio&quot;,&quot;aprende&quot;,&quot;juegos&quot;,&quot;contacto&quot;],&quot;default&quot;:&quot;inicio&quot;,&quot;tsType&quot;:&quot;'inicio'|'aprende'|'juegos'|'contacto'&quot;},&quot;variant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;desktop&quot;,&quot;mobile&quot;],&quot;default&quot;:&quot;desktop&quot;,&quot;tsType&quot;:&quot;'desktop'|'mobile'&quot;},&quot;open&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const a = this.props.active ?? 'inicio';
+    const mobile = this.props.variant === 'mobile';
+    const open = !!this.props.open;
+    return {
+      isDesktop: !mobile, isMobile: mobile, open, closed: !open,
+      aInicio: a === 'inicio', nInicio: a !== 'inicio',
+      aAprende: a === 'aprende', nAprende: a !== 'aprende',
+      aJuegos: a === 'juegos', nJuegos: a !== 'juegos',
+      aContacto: a === 'contacto', nContacto: a !== 'contacto',
+    };
+  }
+}
+</script>
+</body>
+</html>

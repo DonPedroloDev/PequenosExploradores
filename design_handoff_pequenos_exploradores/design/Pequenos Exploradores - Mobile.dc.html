@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><meta name="design_doc_mode" content="canvas"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Playpen+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"><style>body{margin:0;background:#E7E2D6;font-family:system-ui,sans-serif;color:#0F2E22}a{color:#1F6E44}a:hover{color:#0F2E22}input::placeholder,textarea::placeholder{color:#8F9A95;opacity:1}</style></helmet>
+<div style="padding:56px 64px 120px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:6px;max-width:1100px">
+  <div style="font:600 12px ui-monospace,Menlo,monospace;letter-spacing:.08em;color:rgba(15,46,34,.55)">PEQUEÑOS EXPLORADORES · MÓVIL 390 PX</div>
+  <div style="font:400 44px/1.05 'Lilita One',sans-serif">Pantallas móviles</div>
+  <div style="font:400 16px/1.5 system-ui,sans-serif;color:rgba(15,46,34,.7);text-wrap:pretty">Mismas pantallas que escritorio (M01 = D01, etc.), reacomodadas a una columna. La navegación se mueve a un menú (M02). Las alturas muestran la página completa con scroll.</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:56px 40px;align-items:flex-start">
+
+<div id="m01" style="display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;align-items:baseline;gap:10px;font:600 15px system-ui,sans-serif"><span style="font:600 12px ui-monospace,Menlo,monospace;padding:3px 8px;background:#0F2E22;color:#FFF8EE;border-radius:4px">M01</span><span>Inicio</span></div>
+  <div data-screen-label="M01 Inicio" style="position:relative;width:390px;min-height:844px;overflow:hidden;background:#FFF8EE;padding-bottom:120px;box-sizing:border-box;box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(60,50,20,.10)">
+    <dc-import name="PEHeader" variant="mobile" style="display:block;position:relative;width:390px;height:80px;z-index:5" hint-size="390px,80px"></dc-import>
+    <div style="padding:0 20px;display:flex;flex-direction:column">
+      <h1 style="margin:14px 0 0;font:400 50px/48px 'Lilita One',sans-serif">¡EXPLORA,<br>APRENDE Y<br>CUIDA!</h1>
+      <p style="margin:12px 0 0;font:500 19px/27px 'Playpen Sans',sans-serif">Descubre cómo cuidar las plantas y proteger nuestro planeta.</p>
+      <div style="margin-top:20px;display:flex;align-items:center;gap:10px">
+        <a href="#m03" style="width:230px;height:64px;border-radius:999px;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 30px 'Lilita One',sans-serif;color:#0F2E22;text-decoration:none">COMENZAR</a>
+        <img src="../assets/rays.svg" alt="" style="width:26px;transform:scaleX(-1)">
+      </div>
+      <img src="../assets/hero.png" alt="Niña y niño observando un brote" style="display:block;width:390px;margin:18px -20px 0">
+      <div style="margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <a href="#m05" style="height:168px;box-sizing:border-box;border:3px solid #1F6E44;border-radius:16px;background:#E2F2D7;display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;color:#0F2E22"><img src="../assets/icon-aprende.png" alt="" style="height:82px"><span style="margin-top:8px;font:400 25px/26px 'Lilita One',sans-serif">APRENDE</span><img src="../assets/tuft.png" alt="" style="width:32px;margin-top:6px"></a>
+        <a href="#m03" style="height:168px;box-sizing:border-box;border:3px solid #C9B262;border-radius:16px;background:#FCF3D9;display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;color:#0F2E22"><img src="../assets/icon-cuida.png" alt="" style="height:82px"><span style="margin-top:8px;font:400 25px/26px 'Lilita One',sans-serif">CUIDA</span><img src="../assets/tuft.png" alt="" style="width:32px;margin-top:6px"></a>
+        <a href="#m07" style="height:168px;box-sizing:border-box;border:3px solid #1F6E44;border-radius:16px;background:#DCF0D3;display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;color:#0F2E22"><img src="../assets/icon-juega.png" alt="" style="height:82px"><span style="margin-top:8px;font:400 25px/26px 'Lilita One',sans-serif">JUEGA</span><img src="../assets/tuft.png" alt="" style="width:32px;margin-top:6px"></a>
+        <a href="#m12" style="height:168px;box-sizing:border-box;border:3px solid #DA7A5E;border-radius:16px;background:#FEDFCF;display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;color:#0F2E22"><img src="../assets/icon-escribenos.png" alt="" style="height:82px"><span style="margin-top:8px;font:400 25px/26px 'Lilita One',sans-serif">ESCRÍBENOS</span><img src="../assets/tuft.png" alt="" style="width:32px;margin-top:6px"></a>
+      </div>
+    </div>
+    <img src="../assets/bush-left.png" alt="" style="position:absolute;left:0;bottom:0;width:104px;pointer-events:none">
+    <img src="../assets/bush-right.png" alt="" style="position:absolute;right:0;bottom:0;width:114px;pointer-events:none">
+  </div>
+</div>
+
+<div id="m02" style="display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;align-items:baseline;gap:10px;font:600 15px system-ui,sans-serif"><span style="font:600 12px ui-monospace,Menlo,monospace;padding:3px 8px;background:#FFCD33;color:#0F2E22;border-radius:4px">M02</span><span>Menú abierto</span></div>
+  <div data-screen-label="M02 Menu" style="position:relative;width:390px;height:844px;overflow:hidden;background:#FFF8EE;box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(60,50,20,.10)">
+    <dc-import name="PEHeader" variant="mobile" open="{{ true }}" style="display:block;position:relative;width:390px;height:80px;z-index:5" hint-size="390px,80px"></dc-import>
+    <nav style="padding:16px 20px 0;display:flex;flex-direction:column;gap:12px">
+      <a href="#m01" style="height:84px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:20px;background:#FFCD33;display:flex;align-items:center;gap:16px;padding:0 18px;font:400 30px 'Lilita One',sans-serif;color:#0F2E22;text-decoration:none"><span style="width:64px;display:flex;justify-content:center"><img src="../assets/logo.png" alt="" style="height:50px"></span>INICIO</a>
+      <a href="#m03" style="height:84px;box-sizing:border-box;border:3px solid #1F6E44;border-radius:20px;background:#E2F2D7;display:flex;align-items:center;gap:16px;padding:0 18px;font:400 30px 'Lilita One',sans-serif;color:#0F2E22;text-decoration:none"><span style="width:64px;display:flex;justify-content:center"><img src="../assets/icon-aprende.png" alt="" style="height:52px"></span>APRENDE</a>
+      <a href="#m07" style="height:84px;box-sizing:border-box;border:3px solid #C9B262;border-radius:20px;background:#FCF3D9;display:flex;align-items:center;gap:16px;padding:0 18px;font:400 30px 'Lilita One',sans-serif;color:#0F2E22;text-decoration:none"><span style="width:64px;display:flex;justify-content:center"><img src="../assets/icon-juega.png" alt="" style="height:44px"></span>JUEGOS</a>
+      <a href="#m12" style="height:84px;box-sizing:border-box;border:3px solid #DA7A5E;border-radius:20px;background:#FEDFCF;display:flex;align-items:center;gap:16px;padding:0 18px;font:400 30px 'Lilita One',sans-serif;color:#0F2E22;text-decoration:none"><span style="width:64px;display:flex;justify-content:center"><img src="../assets/icon-escribenos.png" alt="" style="height:50px"></span>CONTACTO</a>
+    </nav>
+    <div style="margin-top:34px;display:flex;flex-direction:column;align-items:center;gap:6px">
+      <img src="../assets/mascot.png" alt="" style="width:250px">
+      <div style="font:500 18px/26px 'Playpen Sans',sans-serif;color:#246F47">Un planeta más verde empieza contigo.</div>
+    </div>
+    <img src="../assets/bush-left.png" alt="" style="position:absolute;left:0;bottom:0;width:104px;pointer-events:none">
+    <img src="../assets/bush-right.png" alt="" style="position:absolute;right:0;bottom:0;width:114px;pointer-events:none">
+  </div>
+</div>
+
+<div id="m03" style="display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;align-items:baseline;gap:10px;font:600 15px system-ui,sans-serif"><span style="font:600 12px ui-monospace,Menlo,monospace;padding:3px 8px;background:#0F2E22;color:#FFF8EE;border-radius:4px">M03</span><span>Aprende · Cuida tu planta</span></div>
+  <div data-screen-label="M03 Aprende" style="position:relative;width:390px;min-height:844px;overflow:hidden;background:#FFF8EE;padding-bottom:120px;box-sizing:border-box;box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(60,50,20,.10)">
+    <dc-import name="PEHeader" variant="mobile" style="display:block;position:relative;width:390px;height:80px;z-index:5" hint-size="390px,80px"></dc-import>
+    <img src="../assets/cloud-2.png" alt="" style="position:absolute;left:10px;top:110px;width:70px">
+    <div style="padding:0 20px;display:flex;flex-direction:column;align-items:center;text-align:center">
+      <img src="../assets/mascot.png" alt="" style="width:270px;margin-top:4px">
+      <h1 style="margin:10px 0 0;font:400 46px/44px 'Lilita One',sans-serif">APRENDE A CUIDAR TU PLANTA</h1>
+      <p style="margin:10px 0 0;font:500 19px/27px 'Playpen Sans',sans-serif">Sigue estos pasos para ayudarla a crecer sana y fuerte.</p>
+      <div style="margin-top:20px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <a href="#m04" style="height:196px;box-sizing:border-box;border:3px solid #1F6E44;border-radius:16px;background:#E2F2D7;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-decoration:none;color:#0F2E22"><img src="../assets/step-siembra.png" alt="" style="height:118px"><span style="font:400 22px/24px 'Lilita One',sans-serif">1. SIEMBRA</span></a>
+        <a href="#m04" style="height:196px;box-sizing:border-box;border:3px solid #C9B262;border-radius:16px;background:#FCF3D9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-decoration:none;color:#0F2E22"><img src="../assets/step-riega.png" alt="" style="height:118px"><span style="font:400 22px/24px 'Lilita One',sans-serif">2. RIEGA</span></a>
+        <a href="#m04" style="height:196px;box-sizing:border-box;border:3px solid #1F6E44;border-radius:16px;background:#DCF0D3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-decoration:none;color:#0F2E22"><img src="../assets/step-luz.png" alt="" style="height:118px"><span style="font:400 22px/24px 'Lilita One',sans-serif">3. DALE LUZ</span></a>
+        <a href="#m04" style="height:196px;box-sizing:border-box;border:3px solid #DA7A5E;border-radius:16px;background:#FEDFCF;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-decoration:none;color:#0F2E22"><img src="../assets/step-cuidala.png" alt="" style="height:118px"><span style="font:400 22px/24px 'Lilita One',sans-serif">4. CUÍDALA</span></a>
+      </div>
+      <a href="#m04" style="margin-top:22px;width:100%;height:64px;border-radius:999px;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 30px 'Lilita One',sans-serif;color:#0F2E22;text-decoration:none">COMENZAR</a>
+    </div>
+    <img src="../assets/bush-left.png" alt="" style="position:absolute;left:0;bottom:0;width:104px;pointer-events:none">
+    <img src="../assets/bush-right.png" alt="" style="position:absolute;right:0;bottom:0;width:114px;pointer-events:none">
+  </div>
+</div>
+
+<div id="m04" style="display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;align-items:baseline;gap:10px;font:600 15px system-ui,sans-serif"><span style="font:600 12px ui-monospace,Menlo,monospace;padding:3px 8px;background:#FFCD33;color:#0F2E22;border-radius:4px">M04</span><span>Aprende · Paso a paso</span></div>
+  <div data-screen-label="M04 Paso 1 Siembra" style="position:relative;width:390px;min-height:844px;overflow:hidden;background:#FFF8EE;padding-bottom:120px;box-sizing:border-box;box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(60,50,20,.10)">
+    <dc-import name="PEHeader" variant="mobile" style="display:block;position:relative;width:390px;height:80px;z-index:5" hint-size="390px,80px"></dc-import>
+    <div style="padding:0 20px;display:flex;flex-direction:column">
+      <div style="margin-top:8px;display:flex;align-items:center;justify-content:space-between">
+        <span style="font:400 17px 'Lilita One',sans-serif;color:#1F6E44">PASO 1 DE 4</span>
+        <div style="display:flex;gap:5px"><span style="width:36px;height:10px;border-radius:5px;background:#FFCD33;box-shadow:inset 0 0 0 2px #0F2E22"></span><span style="width:36px;height:10px;border-radius:5px;background:#E2F2D7;box-shadow:inset 0 0 0 2px #9CC5A8"></span><span style="width:36px;height:10px;border-radius:5px;background:#E2F2D7;box-shadow:inset 0 0 0 2px #9CC5A8"></span><span style="width:36px;height:10px;border-radius:5px;background:#E2F2D7;box-shadow:inset 0 0 0 2px #9CC5A8"></span></div>
+      </div>
+      <div style="position:relative;margin-top:14px;height:250px;box-sizing:border-box;border:3px solid #1F6E44;border-radius:20px;background:#E2F2D7;display:flex;align-items:center;justify-content:center">
+        <span style="position:absolute;left:14px;top:14px;width:52px;height:52px;border-radius:50%;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 32px 'Lilita One',sans-serif">1</span>
+        <img src="../assets/step-siembra.png" alt="" style="width:240px;margin-top:20px">
+      </div>
+      <h1 style="margin:18px 0 0;font:400 58px/56px 'Lilita One',sans-serif">SIEMBRA</h1>
+      <p style="margin:6px 0 0;font:500 19px/26px 'Playpen Sans',sans-serif">Todo empieza con una pequeña semilla.</p>
+      <ol style="margin:18px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
+        <li style="display:flex;align-items:flex-start;gap:12px"><span style="flex:none;width:34px;height:34px;border-radius:50%;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 19px 'Lilita One',sans-serif">1</span><span style="padding-top:4px;font:400 18px/25px 'Playpen Sans',sans-serif">Llena tu maceta con tierra hasta casi arriba.</span></li>
+        <li style="display:flex;align-items:flex-start;gap:12px"><span style="flex:none;width:34px;height:34px;border-radius:50%;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 19px 'Lilita One',sans-serif">2</span><span style="padding-top:4px;font:400 18px/25px 'Playpen Sans',sans-serif">Haz un hoyito del tamaño de tu dedo.</span></li>
+        <li style="display:flex;align-items:flex-start;gap:12px"><span style="flex:none;width:34px;height:34px;border-radius:50%;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 19px 'Lilita One',sans-serif">3</span><span style="padding-top:4px;font:400 18px/25px 'Playpen Sans',sans-serif">Pon la semilla y tápala con poquita tierra.</span></li>
+      </ol>
+      <div style="margin-top:18px;box-sizing:border-box;border:3px solid #DA7A5E;border-radius:16px;background:#FEDFCF;padding:12px 16px 14px">
+        <div style="font:400 19px/24px 'Lilita One',sans-serif">¿SABÍAS QUE…?</div>
+        <div style="margin-top:4px;font:400 17px/24px 'Playpen Sans',sans-serif">Dentro de cada semilla hay una plantita bebé esperando crecer.</div>
+      </div>
+      <a href="#m04" style="margin-top:22px;height:60px;border-radius:999px;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 22px 'Lilita One',sans-serif;color:#0F2E22;text-decoration:none">SIGUIENTE PASO: RIEGA</a>
+      <span style="margin-top:10px;height:56px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:999px;display:flex;align-items:center;justify-content:center;font:400 20px 'Lilita One',sans-serif;opacity:.35">ANTERIOR</span>
+      <a href="#m03" style="margin-top:16px;align-self:center;font:400 16px 'Lilita One',sans-serif;color:#1F6E44;text-underline-offset:4px">VER TODOS LOS PASOS</a>
+    </div>
+    <img src="../assets/bush-left.png" alt="" style="position:absolute;left:0;bottom:0;width:104px;pointer-events:none">
+    <img src="../assets/bush-right.png" alt="" style="position:absolute;right:0;bottom:0;width:114px;pointer-events:none">
+  </div>
+</div>
+
+<div id="m05" style="display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;align-items:baseline;gap:10px;font:600 15px system-ui,sans-serif"><span style="font:600 12px ui-monospace,Menlo,monospace;padding:3px 8px;background:#FFCD33;color:#0F2E22;border-radius:4px">M05</span><span>Aprende · Conoce las plantas</span></div>
+  <div data-screen-label="M05 Conoce las plantas" style="position:relative;width:390px;min-height:844px;overflow:hidden;background:#FFF8EE;padding-bottom:120px;box-sizing:border-box;box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(60,50,20,.10)">
+    <dc-import name="PEHeader" variant="mobile" style="display:block;position:relative;width:390px;height:80px;z-index:5" hint-size="390px,80px"></dc-import>
+    <img src="../assets/step-luz.png" alt="" style="position:absolute;right:10px;top:84px;width:118px">
+    <div style="padding:0 20px;display:flex;flex-direction:column">
+      <h1 style="margin:14px 0 0;font:400 46px/44px 'Lilita One',sans-serif">CONOCE<br>LAS PLANTAS</h1>
+      <p style="margin:10px 0 0;font:500 18px/26px 'Playpen Sans',sans-serif">Cada planta es diferente. Descubre qué necesita para crecer feliz.</p>
+      <div style="margin:16px -20px 0;padding:0 20px;display:flex;gap:8px;overflow:hidden">
+        <span style="flex:none;height:42px;padding:0 18px;border-radius:999px;background:#FFCD33;display:flex;align-items:center;font:400 17px 'Lilita One',sans-serif">TODAS</span>
+        <span style="flex:none;height:42px;padding:0 18px;box-sizing:border-box;border:2.5px solid #1F6E44;border-radius:999px;background:#FFFCF7;display:flex;align-items:center;font:400 17px 'Lilita One',sans-serif">DE INTERIOR</span>
+        <span style="flex:none;height:42px;padding:0 18px;box-sizing:border-box;border:2.5px solid #1F6E44;border-radius:999px;background:#FFFCF7;display:flex;align-items:center;font:400 17px 'Lilita One',sans-serif">PARA COMER</span>
+        <span style="flex:none;height:42px;padding:0 18px;box-sizing:border-box;border:2.5px solid #1F6E44;border-radius:999px;background:#FFFCF7;display:flex;align-items:center;font:400 17px 'Lilita One',sans-serif">DEL DESIERTO</span>
+      </div>
+      <div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <sc-for list="{{ plants }}" as="p" hint-placeholder-count="6">
+          <a href="#m06" style="display:flex;flex-direction:column;box-sizing:border-box;border:3px solid {{ p.border }};border-radius:16px;background:{{ p.bg }};padding:10px 10px 12px;text-decoration:none;color:#0F2E22">
+            <div style="height:110px;border-radius:10px;background:repeating-linear-gradient(135deg,rgba(15,46,34,.07) 0 8px,rgba(255,252,247,.55) 8px 16px);display:flex;align-items:center;justify-content:center;font:500 10.5px ui-monospace,Menlo,monospace;color:rgba(15,46,34,.6)">ilustración: {{ p.slug }}</div>
+            <div style="margin-top:10px;font:400 22px/24px 'Lilita One',sans-serif">{{ p.name }}</div>
+            <span style="margin-top:8px;align-self:flex-start;padding:2px 10px;border-radius:999px;background:#FFFCF7;border:2px solid {{ p.border }};font:600 14px/20px 'Playpen Sans',sans-serif">{{ p.t1 }}</span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+    <img src="../assets/bush-left.png" alt="" style="position:absolute;left:0;bottom:0;width:104px;pointer-events:none">
+    <img src="../assets/bush-right.png" alt="" style="position:absolute;right:0;bottom:0;width:114px;pointer-events:none">
+  </div>
+</div>
+
+<div id="m06" style="display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;align-items:baseline;gap:10px;font:600 15px system-ui,sans-serif"><span style="font:600 12px ui-monospace,Menlo,monospace;padding:3px 8px;background:#FFCD33;color:#0F2E22;border-radius:4px">M06</span><span>Aprende · Ficha de planta</span></div>
+  <div data-screen-label="M06 Ficha Girasol" style="position:relative;width:390px;min-height:844px;overflow:hidden;background:#FFF8EE;padding-bottom:120px;box-sizing:border-box;box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(60,50,20,.10)">
+    <dc-import name="PEHeader" variant="mobile" style="display:block;position:relative;width:390px;height:80px;z-index:5" hint-size="390px,80px"></dc-import>
+    <div style="padding:0 20px;display:flex;flex-direction:column">
+      <a href="#m05" style="margin-top:6px;display:flex;align-items:center;gap:8px;font:400 16px 'Lilita One',sans-serif;color:#1F6E44;text-decoration:none"><svg width="20" height="14" viewBox="0 0 22 16"><path d="M9 2 L3 8 L9 14 M3 8 H20" stroke="#1F6E44" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>TODAS LAS PLANTAS</a>
+      <div style="margin-top:12px;height:260px;box-sizing:border-box;border:3px solid #C9B262;border-radius:20px;background:#FCF3D9;padding:14px">
+        <div style="height:100%;border-radius:12px;background:repeating-linear-gradient(135deg,rgba(15,46,34,.07) 0 10px,rgba(255,252,247,.55) 10px 20px);display:flex;align-items:center;justify-content:center;font:500 12px ui-monospace,Menlo,monospace;color:rgba(15,46,34,.6)">ilustración: girasol</div>
+      </div>
+      <div style="margin-top:16px;display:flex;gap:8px">
+        <span style="height:32px;padding:0 12px;box-sizing:border-box;border:2.5px solid #1F6E44;border-radius:999px;display:flex;align-items:center;font:400 15px 'Lilita One',sans-serif;color:#1F6E44">CON FLORES</span>
+        <span style="height:32px;padding:0 12px;box-sizing:border-box;border:2.5px solid #1F6E44;border-radius:999px;display:flex;align-items:center;font:400 15px 'Lilita One',sans-serif;color:#1F6E44">MUCHO SOL</span>
+      </div>
+      <h1 style="margin:10px 0 0;font:400 58px/56px 'Lilita One',sans-serif">GIRASOL</h1>
+      <p style="margin:4px 0 0;font:500 19px/26px 'Playpen Sans',sans-serif">La flor que gira para seguir al sol.</p>
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px">
+        <div style="height:80px;box-sizing:border-box;border:3px solid #C9B262;border-radius:16px;background:#FCF3D9;display:flex;align-items:center;gap:14px;padding:0 14px"><span style="width:64px;display:flex;justify-content:center"><img src="../assets/icon-cuida.png" alt="" style="height:48px"></span><div><div style="font:400 18px/22px 'Lilita One',sans-serif">AGUA</div><div style="font:500 16px/22px 'Playpen Sans',sans-serif">2 veces por semana</div></div></div>
+        <div style="height:80px;box-sizing:border-box;border:3px solid #1F6E44;border-radius:16px;background:#E2F2D7;display:flex;align-items:center;gap:14px;padding:0 14px"><span style="width:64px;display:flex;justify-content:center"><img src="../assets/step-luz.png" alt="" style="height:56px"></span><div><div style="font:400 18px/22px 'Lilita One',sans-serif">LUZ</div><div style="font:500 16px/22px 'Playpen Sans',sans-serif">Sol directo todo el día</div></div></div>
+        <div style="height:80px;box-sizing:border-box;border:3px solid #DA7A5E;border-radius:16px;background:#FEDFCF;display:flex;align-items:center;gap:14px;padding:0 14px"><span style="width:64px;display:flex;justify-content:center"><img src="../assets/icon-aprende.png" alt="" style="height:50px"></span><div><div style="font:400 18px/22px 'Lilita One',sans-serif">CRECE EN</div><div style="font:500 16px/22px 'Playpen Sans',sans-serif">Unos 3 meses</div></div></div>
+      </div>
+      <div style="margin-top:20px;font:400 21px/26px 'Lilita One',sans-serif">DATOS CURIOSOS</div>
+      <ul style="margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px">
+        <li style="display:flex;align-items:flex-start;gap:10px;font:400 17px/24px 'Playpen Sans',sans-serif"><span style="flex:none;margin-top:7px;width:10px;height:10px;border-radius:50%;background:#FFCD33;box-shadow:0 0 0 2px #0F2E22"></span>Puede crecer más alto que una persona adulta.</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;font:400 17px/24px 'Playpen Sans',sans-serif"><span style="flex:none;margin-top:7px;width:10px;height:10px;border-radius:50%;background:#FFCD33;box-shadow:0 0 0 2px #0F2E22"></span>Sus semillas son comida para muchas aves.</li>
+      </ul>
+      <a href="#m04" style="margin-top:22px;height:60px;border-radius:999px;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 22px 'Lilita One',sans-serif;color:#0F2E22;text-decoration:none">APRENDE A SEMBRARLA</a>
+    </div>
+    <img src="../assets/bush-left.png" alt="" style="position:absolute;left:0;bottom:0;width:104px;pointer-events:none">
+    <img src="../assets/bush-right.png" alt="" style="position:absolute;right:0;bottom:0;width:114px;pointer-events:none">
+  </div>
+</div>
+
+<div id="m07" style="display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;align-items:baseline;gap:10px;font:600 15px system-ui,sans-serif"><span style="font:600 12px ui-monospace,Menlo,monospace;padding:3px 8px;background:#0F2E22;color:#FFF8EE;border-radius:4px">M07</span><span>Juegos</span></div>
+  <div data-screen-label="M07 Juegos" style="position:relative;width:390px;min-height:844px;overflow:hidden;background:#FFF8EE;padding-bottom:120px;box-sizing:border-box;box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(60,50,20,.10)">
+    <dc-import name="PEHeader" variant="mobile" style="display:block;position:relative;width:390px;height:80px;z-index:5" hint-size="390px,80px"></dc-import>
+    <img src="../assets/cloud-3.png" alt="" style="position:absolute;right:8px;top:96px;width:84px">
+    <div style="padding:0 20px;display:flex;flex-direction:column;align-items:center;text-align:center">
+      <div style="margin-top:22px;display:flex;align-items:center;gap:10px">
+        <img src="../assets/rays.svg" alt="" style="width:24px">
+        <h1 style="margin:0;font:400 48px/46px 'Lilita One',sans-serif">APRENDE<br>JUGANDO</h1>
+        <img src="../assets/rays.svg" alt="" style="width:24px;transform:scaleX(-1)">
+      </div>
+      <p style="margin:10px 0 0;font:500 21px/28px 'Playpen Sans',sans-serif">Elige una aventura ecológica.</p>
+      <div style="margin-top:20px;width:100%;display:flex;flex-direction:column;gap:14px">
+        <a href="#m08" style="box-sizing:border-box;border:3px solid #1F6E44;border-radius:18px;background:#E3F5DF;padding:16px 16px 20px;display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#0F2E22"><img src="../assets/game-cultiva.png" alt="" style="height:160px"><span style="margin-top:10px;font:400 26px/28px 'Lilita One',sans-serif">CULTIVA TU PLANTA</span><span style="margin-top:12px;width:180px;height:52px;border-radius:999px;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 26px 'Lilita One',sans-serif">JUGAR</span></a>
+        <a href="#m09" style="box-sizing:border-box;border:3px solid #C9B262;border-radius:18px;background:#FCF3D9;padding:16px 16px 20px;display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#0F2E22"><img src="../assets/game-residuos.png" alt="" style="height:150px;margin:5px 0"><span style="margin-top:10px;font:400 26px/28px 'Lilita One',sans-serif">SEPARA LOS RESIDUOS</span><span style="margin-top:12px;width:180px;height:52px;border-radius:999px;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 26px 'Lilita One',sans-serif">JUGAR</span></a>
+        <a href="#m10" style="box-sizing:border-box;border:3px solid #DA7A5E;border-radius:18px;background:#FEE4D8;padding:16px 16px 20px;display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#0F2E22"><img src="../assets/game-quiz.png" alt="" style="height:160px"><span style="margin-top:10px;font:400 26px/28px 'Lilita One',sans-serif">QUIZ ECOLÓGICO</span><span style="margin-top:12px;width:180px;height:52px;border-radius:999px;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 26px 'Lilita One',sans-serif">JUGAR</span></a>
+      </div>
+    </div>
+    <img src="../assets/bush-left.png" alt="" style="position:absolute;left:0;bottom:0;width:104px;pointer-events:none">
+    <img src="../assets/bush-right.png" alt="" style="position:absolute;right:0;bottom:0;width:114px;pointer-events:none">
+  </div>
+</div>
+
+<div id="m08" style="display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;align-items:baseline;gap:10px;font:600 15px system-ui,sans-serif"><span style="font:600 12px ui-monospace,Menlo,monospace;padding:3px 8px;background:#FFCD33;color:#0F2E22;border-radius:4px">M08</span><span>Juego · Cultiva tu planta</span></div>
+  <div data-screen-label="M08 Juego Cultiva" style="position:relative;width:390px;min-height:844px;overflow:hidden;background:#FFF8EE;padding-bottom:120px;box-sizing:border-box;box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(60,50,20,.10)">
+    <dc-import name="PEHeader" variant="mobile" style="display:block;position:relative;width:390px;height:80px;z-index:5" hint-size="390px,80px"></dc-import>
+    <div style="padding:0 20px;display:flex;flex-direction:column">
+      <div style="margin-top:4px;display:flex;align-items:center;justify-content:space-between;gap:10px">
+        <a href="#m07" aria-label="Volver a juegos" style="flex:none;width:44px;height:44px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:50%;display:flex;align-items:center;justify-content:center"><svg width="18" height="14" viewBox="0 0 22 16"><path d="M9 2 L3 8 L9 14 M3 8 H20" stroke="#0F2E22" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+        <div style="font:400 24px/26px 'Lilita One',sans-serif">CULTIVA TU PLANTA</div>
+        <span style="flex:none;height:40px;padding:0 12px;box-sizing:border-box;border:3px solid #C9B262;border-radius:999px;background:#FCF3D9;display:flex;align-items:center;font:400 16px 'Lilita One',sans-serif">DÍA 3/7</span>
+      </div>
+      <div style="position:relative;margin-top:14px;height:320px;box-sizing:border-box;border:3px solid #1F6E44;border-radius:22px;background:#E2F2D7">
+        <div style="position:absolute;right:16px;top:16px;padding:10px 14px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:16px;background:#FFFCF7;font:600 16px/20px 'Playpen Sans',sans-serif">¡Tengo sed!<span style="position:absolute;left:24px;bottom:-9px;width:13px;height:13px;background:#FFFCF7;border-right:3px solid #0F2E22;border-bottom:3px solid #0F2E22;transform:rotate(45deg)"></span></div>
+        <img src="../assets/mascot.png" alt="Tu plantita" style="position:absolute;left:14px;top:70px;width:320px">
+        <div style="position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;align-items:center;gap:6px;font:400 14px 'Lilita One',sans-serif">
+          <span style="width:11px;height:11px;border-radius:50%;background:#1F6E44"></span>SEMILLA<span style="width:12px;height:3px;background:#1F6E44"></span>
+          <span style="width:14px;height:14px;border-radius:50%;background:#FFCD33;box-shadow:0 0 0 2.5px #0F2E22"></span>BROTE<span style="width:12px;height:3px;background:#9CC5A8"></span>
+          <span style="color:#5E8B70">PLANTA</span><span style="width:12px;height:3px;background:#9CC5A8"></span><span style="color:#5E8B70">FLOR</span>
+        </div>
+      </div>
+      <div style="margin-top:18px;display:flex;flex-direction:column;gap:12px">
+        <div><div style="display:flex;justify-content:space-between;font:400 17px/22px 'Lilita One',sans-serif"><span>AGUA</span><span style="font:600 14px/22px 'Playpen Sans',sans-serif;color:#B8513A">¡Muy poca!</span></div><div style="margin-top:6px;height:18px;box-sizing:border-box;border:2.5px solid #0F2E22;border-radius:9px;background:#FFFCF7;overflow:hidden"><div style="width:25%;height:100%;background:#4892C4"></div></div></div>
+        <div><div style="display:flex;justify-content:space-between;font:400 17px/22px 'Lilita One',sans-serif"><span>SOL</span><span style="font:600 14px/22px 'Playpen Sans',sans-serif">Bien</span></div><div style="margin-top:6px;height:18px;box-sizing:border-box;border:2.5px solid #0F2E22;border-radius:9px;background:#FFFCF7;overflow:hidden"><div style="width:80%;height:100%;background:#FFCD33"></div></div></div>
+        <div><div style="display:flex;justify-content:space-between;font:400 17px/22px 'Lilita One',sans-serif"><span>CARIÑO</span><span style="font:600 14px/22px 'Playpen Sans',sans-serif">Bien</span></div><div style="margin-top:6px;height:18px;box-sizing:border-box;border:2.5px solid #0F2E22;border-radius:9px;background:#FFFCF7;overflow:hidden"><div style="width:60%;height:100%;background:#F07A5C"></div></div></div>
+      </div>
+      <div style="margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <span style="height:64px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:18px;background:#CFE4F3;display:flex;align-items:center;justify-content:center;font:400 18px 'Lilita One',sans-serif;box-shadow:0 0 0 5px rgba(72,146,196,.35)">REGAR</span>
+        <span style="height:64px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:18px;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 18px 'Lilita One',sans-serif">DAR SOL</span>
+        <span style="height:64px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:18px;background:#FEDFCF;display:flex;align-items:center;justify-content:center;font:400 18px 'Lilita One',sans-serif">CARIÑO</span>
+      </div>
+      <div style="margin-top:14px;text-align:center;font:400 16px/23px 'Playpen Sans',sans-serif;color:#246F47">Cada acción cuenta como un día. ¡Haz que florezca antes del día 7!</div>
+    </div>
+    <img src="../assets/bush-left.png" alt="" style="position:absolute;left:0;bottom:0;width:104px;pointer-events:none">
+    <img src="../assets/bush-right.png" alt="" style="position:absolute;right:0;bottom:0;width:114px;pointer-events:none">
+  </div>
+</div>
+
+<div id="m09" style="display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;align-items:baseline;gap:10px;font:600 15px system-ui,sans-serif"><span style="font:600 12px ui-monospace,Menlo,monospace;padding:3px 8px;background:#FFCD33;color:#0F2E22;border-radius:4px">M09</span><span>Juego · Separa los residuos</span></div>
+  <div data-screen-label="M09 Juego Residuos" style="position:relative;width:390px;min-height:844px;overflow:hidden;background:#FFF8EE;padding-bottom:120px;box-sizing:border-box;box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(60,50,20,.10)">
+    <dc-import name="PEHeader" variant="mobile" style="display:block;position:relative;width:390px;height:80px;z-index:5" hint-size="390px,80px"></dc-import>
+    <div style="padding:0 20px;display:flex;flex-direction:column">
+      <div style="margin-top:4px;display:flex;align-items:center;gap:12px">
+        <a href="#m07" aria-label="Volver a juegos" style="flex:none;width:44px;height:44px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:50%;display:flex;align-items:center;justify-content:center"><svg width="18" height="14" viewBox="0 0 22 16"><path d="M9 2 L3 8 L9 14 M3 8 H20" stroke="#0F2E22" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+        <div style="font:400 24px/26px 'Lilita One',sans-serif">SEPARA LOS RESIDUOS</div>
+      </div>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <span style="height:40px;padding:0 14px;box-sizing:border-box;border:3px solid #1F6E44;border-radius:999px;background:#E2F2D7;display:flex;align-items:center;font:400 17px 'Lilita One',sans-serif">4 / 10</span>
+        <span style="height:40px;padding:0 16px;border-radius:999px;background:#FFCD33;display:flex;align-items:center;font:400 17px 'Lilita One',sans-serif">PUNTOS 40</span>
+      </div>
+      <p style="margin:16px 0 0;text-align:center;font:500 18px/25px 'Playpen Sans',sans-serif">Arrastra cada residuo al bote correcto.</p>
+      <div style="position:relative;margin-top:16px;height:200px">
+        <div style="position:absolute;left:85px;top:6px;width:180px;height:172px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:18px;background:#FFFCF7;padding:10px;transform:rotate(-4deg);box-shadow:0 10px 0 rgba(15,46,34,.10);display:flex;flex-direction:column">
+          <div style="height:96px;border-radius:10px;background:repeating-linear-gradient(135deg,rgba(15,46,34,.07) 0 8px,rgba(255,252,247,.6) 8px 16px);display:flex;align-items:center;justify-content:center;font:500 10.5px ui-monospace,Menlo,monospace;color:rgba(15,46,34,.6)">residuo: botella</div>
+          <div style="margin-top:8px;text-align:center;font:400 17px/19px 'Lilita One',sans-serif">BOTELLA DE PLÁSTICO</div>
+        </div>
+        <span style="position:absolute;right:0;top:150px;height:40px;padding:0 14px;border-radius:999px;background:#1F6E44;color:#FFF8EE;display:flex;align-items:center;font:400 17px 'Lilita One',sans-serif">¡MUY BIEN! +10</span>
+      </div>
+      <div style="margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;align-items:end">
+        <div style="height:176px;box-sizing:border-box;border:3px dashed #1F6E44;border-radius:18px;background:#E2F2D7;display:flex;flex-direction:column;align-items:center;padding:12px 4px 0;text-align:center"><img src="../assets/bin-green.png" alt="" style="height:96px"><span style="margin-top:8px;font:400 15px/17px 'Lilita One',sans-serif">ORGÁNICO</span></div>
+        <div style="height:176px;box-sizing:border-box;border:3px dashed #4A86B5;border-radius:18px;background:#DDEBF6;display:flex;flex-direction:column;align-items:center;padding:12px 4px 0;text-align:center"><img src="../assets/bin-blue.png" alt="" style="height:96px"><span style="margin-top:8px;font:400 15px/17px 'Lilita One',sans-serif">PAPEL Y CARTÓN</span></div>
+        <div style="height:176px;box-sizing:border-box;border:4px solid #C9B262;border-radius:18px;background:#FFEFB8;display:flex;flex-direction:column;align-items:center;padding:11px 4px 0;text-align:center;transform:translateY(-6px);box-shadow:0 0 0 5px rgba(255,205,51,.45)"><img src="../assets/bin-yellow.png" alt="" style="height:96px"><span style="margin-top:8px;font:400 15px/17px 'Lilita One',sans-serif">PLÁSTICO Y LATAS</span></div>
+      </div>
+    </div>
+    <img src="../assets/bush-left.png" alt="" style="position:absolute;left:0;bottom:0;width:104px;pointer-events:none">
+    <img src="../assets/bush-right.png" alt="" style="position:absolute;right:0;bottom:0;width:114px;pointer-events:none">
+  </div>
+</div>
+
+<div id="m10" style="display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;align-items:baseline;gap:10px;font:600 15px system-ui,sans-serif"><span style="font:600 12px ui-monospace,Menlo,monospace;padding:3px 8px;background:#FFCD33;color:#0F2E22;border-radius:4px">M10</span><span>Juego · Quiz ecológico</span></div>
+  <div data-screen-label="M10 Juego Quiz" style="position:relative;width:390px;min-height:844px;overflow:hidden;background:#FFF8EE;padding-bottom:120px;box-sizing:border-box;box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(60,50,20,.10)">
+    <dc-import name="PEHeader" variant="mobile" style="display:block;position:relative;width:390px;height:80px;z-index:5" hint-size="390px,80px"></dc-import>
+    <div style="padding:0 20px;display:flex;flex-direction:column">
+      <div style="margin-top:4px;display:flex;align-items:center;gap:12px">
+        <a href="#m07" aria-label="Volver a juegos" style="flex:none;width:44px;height:44px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:50%;display:flex;align-items:center;justify-content:center"><svg width="18" height="14" viewBox="0 0 22 16"><path d="M9 2 L3 8 L9 14 M3 8 H20" stroke="#0F2E22" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+        <div style="font:400 24px/26px 'Lilita One',sans-serif">QUIZ ECOLÓGICO</div>
+      </div>
+      <div style="margin-top:14px;display:flex;align-items:center;justify-content:space-between">
+        <span style="font:400 17px 'Lilita One',sans-serif">PREGUNTA 3 DE 5</span>
+        <div style="display:flex;gap:6px"><span style="width:13px;height:13px;border-radius:50%;background:#1F6E44"></span><span style="width:13px;height:13px;border-radius:50%;background:#1F6E44"></span><span style="width:13px;height:13px;border-radius:50%;background:#FFCD33;box-shadow:0 0 0 2.5px #0F2E22"></span><span style="width:13px;height:13px;box-sizing:border-box;border-radius:50%;border:2.5px solid #9CC5A8"></span><span style="width:13px;height:13px;box-sizing:border-box;border-radius:50%;border:2.5px solid #9CC5A8"></span></div>
+      </div>
+      <img src="../assets/game-quiz.png" alt="" style="width:210px;align-self:center;margin-top:10px">
+      <div style="margin-top:12px;box-sizing:border-box;border:3px solid #DA7A5E;border-radius:22px;background:#FEE4D8;padding:20px 16px 18px;display:flex;flex-direction:column">
+        <div style="font:400 26px/30px 'Lilita One',sans-serif;text-wrap:balance">¿QUÉ NECESITA UNA PLANTA PARA HACER SU PROPIO ALIMENTO?</div>
+        <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px">
+          <span style="height:60px;box-sizing:border-box;border:3px solid #1F6E44;border-radius:16px;background:#E2F2D7;display:flex;align-items:center;gap:12px;padding:0 12px;font:400 20px 'Lilita One',sans-serif;box-shadow:0 0 0 4px rgba(31,110,68,.18)"><span style="width:36px;height:36px;border-radius:50%;background:#1F6E44;display:flex;align-items:center;justify-content:center"><svg width="18" height="15" viewBox="0 0 22 18"><path d="M3 9 L9 15 L19 3" stroke="#FFF8EE" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>LUZ DEL SOL</span>
+          <span style="height:60px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:16px;background:#FFFCF7;display:flex;align-items:center;gap:12px;padding:0 12px;font:400 20px 'Lilita One',sans-serif;opacity:.55"><span style="width:36px;height:36px;box-sizing:border-box;border-radius:50%;background:#FCF3D9;border:2.5px solid #0F2E22;display:flex;align-items:center;justify-content:center;font-size:18px">B</span>DULCES</span>
+          <span style="height:60px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:16px;background:#FFFCF7;display:flex;align-items:center;gap:12px;padding:0 12px;font:400 20px 'Lilita One',sans-serif;opacity:.55"><span style="width:36px;height:36px;box-sizing:border-box;border-radius:50%;background:#FCF3D9;border:2.5px solid #0F2E22;display:flex;align-items:center;justify-content:center;font-size:18px">C</span>MÚSICA FUERTE</span>
+          <span style="height:60px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:16px;background:#FFFCF7;display:flex;align-items:center;gap:12px;padding:0 12px;font:400 20px 'Lilita One',sans-serif;opacity:.55"><span style="width:36px;height:36px;box-sizing:border-box;border-radius:50%;background:#FCF3D9;border:2.5px solid #0F2E22;display:flex;align-items:center;justify-content:center;font-size:18px">D</span>OSCURIDAD</span>
+        </div>
+        <div style="margin-top:16px;font:400 22px/26px 'Lilita One',sans-serif;color:#1F6E44">¡CORRECTO!</div>
+        <div style="margin-top:2px;font:400 16px/23px 'Playpen Sans',sans-serif">Con la luz del sol, las plantas fabrican su comida.</div>
+        <a href="#m11" style="margin-top:16px;height:58px;border-radius:999px;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 22px 'Lilita One',sans-serif;color:#0F2E22;text-decoration:none">SIGUIENTE</a>
+      </div>
+    </div>
+    <img src="../assets/bush-left.png" alt="" style="position:absolute;left:0;bottom:0;width:104px;pointer-events:none">
+    <img src="../assets/bush-right.png" alt="" style="position:absolute;right:0;bottom:0;width:114px;pointer-events:none">
+  </div>
+</div>
+
+<div id="m11" style="display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;align-items:baseline;gap:10px;font:600 15px system-ui,sans-serif"><span style="font:600 12px ui-monospace,Menlo,monospace;padding:3px 8px;background:#FFCD33;color:#0F2E22;border-radius:4px">M11</span><span>Juego · Resultado</span></div>
+  <div data-screen-label="M11 Resultado" style="position:relative;width:390px;height:844px;overflow:hidden;background:#FFF8EE;box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(60,50,20,.10)">
+    <dc-import name="PEHeader" variant="mobile" style="display:block;position:relative;width:390px;height:80px;z-index:5" hint-size="390px,80px"></dc-import>
+    <img src="../assets/cloud-2.png" alt="" style="position:absolute;left:10px;top:120px;width:70px">
+    <div style="padding:0 20px;display:flex;flex-direction:column;align-items:center;text-align:center">
+      <img src="../assets/mascot.png" alt="" style="width:310px;margin-top:16px">
+      <h1 style="margin:16px 0 0;font:400 54px/52px 'Lilita One',sans-serif">¡BIEN HECHO!</h1>
+      <p style="margin:10px 0 0;font:500 20px/28px 'Playpen Sans',sans-serif">Respondiste 4 de 5 preguntas correctas.</p>
+      <span style="margin-top:16px;padding:10px 18px;border-radius:999px;background:#1F6E44;color:#FFF8EE;font:400 17px/20px 'Lilita One',sans-serif">NUEVA INSIGNIA: GUARDIÁN DEL PLANETA</span>
+      <a href="#m10" style="margin-top:26px;width:100%;height:62px;border-radius:999px;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 24px 'Lilita One',sans-serif;color:#0F2E22;text-decoration:none">JUGAR OTRA VEZ</a>
+      <a href="#m07" style="margin-top:10px;width:100%;height:58px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:999px;display:flex;align-items:center;justify-content:center;font:400 22px 'Lilita One',sans-serif;color:#0F2E22;text-decoration:none">OTRO JUEGO</a>
+    </div>
+    <img src="../assets/bush-left.png" alt="" style="position:absolute;left:0;bottom:0;width:104px;pointer-events:none">
+    <img src="../assets/bush-right.png" alt="" style="position:absolute;right:0;bottom:0;width:114px;pointer-events:none">
+  </div>
+</div>
+
+<div id="m12" style="display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;align-items:baseline;gap:10px;font:600 15px system-ui,sans-serif"><span style="font:600 12px ui-monospace,Menlo,monospace;padding:3px 8px;background:#0F2E22;color:#FFF8EE;border-radius:4px">M12</span><span>Contacto</span></div>
+  <div data-screen-label="M12 Contacto" style="position:relative;width:390px;min-height:844px;overflow:hidden;background:#FFF8EE;padding-bottom:120px;box-sizing:border-box;box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(60,50,20,.10)">
+    <dc-import name="PEHeader" variant="mobile" style="display:block;position:relative;width:390px;height:80px;z-index:5" hint-size="390px,80px"></dc-import>
+    <div style="padding:0 20px;display:flex;flex-direction:column;align-items:center;text-align:center">
+      <div style="margin-top:18px;display:flex;align-items:center;gap:8px">
+        <img src="../assets/rays.svg" alt="" style="width:22px">
+        <h1 style="margin:0;font:400 52px/56px 'Lilita One',sans-serif">¡ESCRÍBENOS!</h1>
+        <img src="../assets/rays.svg" alt="" style="width:22px;transform:scaleX(-1)">
+      </div>
+      <p style="margin:8px 0 0;font:500 19px/26px 'Playpen Sans',sans-serif">Envíanos tus ideas, dudas o mensajes para cuidar juntos el planeta.</p>
+      <img src="../assets/mailbox.png" alt="" style="width:250px;margin-top:12px">
+      <form style="margin:14px 0 0;width:100%;box-sizing:border-box;border:3px solid #1A7A4A;border-radius:22px;background:#E8F5E3;padding:20px 18px 18px;display:flex;flex-direction:column;text-align:left">
+        <label style="font:400 19px/22px 'Lilita One',sans-serif">NOMBRE</label>
+        <input placeholder="Escribe tu nombre" style="margin-top:8px;height:54px;box-sizing:border-box;border:2px solid #6B9B82;border-radius:12px;background:#FFFCF7;padding:0 14px;font:400 17px 'Playpen Sans',sans-serif;color:#0F2E22;outline:none" style-focus="border-color:#1A7A4A;box-shadow:0 0 0 4px rgba(255,205,51,.55)">
+        <label style="margin-top:16px;font:400 19px/22px 'Lilita One',sans-serif">CORREO</label>
+        <input placeholder="Escribe tu correo" style="margin-top:8px;height:54px;box-sizing:border-box;border:2px solid #6B9B82;border-radius:12px;background:#FFFCF7;padding:0 14px;font:400 17px 'Playpen Sans',sans-serif;color:#0F2E22;outline:none" style-focus="border-color:#1A7A4A;box-shadow:0 0 0 4px rgba(255,205,51,.55)">
+        <label style="margin-top:16px;font:400 19px/22px 'Lilita One',sans-serif">MENSAJE</label>
+        <textarea placeholder="Cuéntanos qué quieres compartir" style="margin-top:8px;height:120px;box-sizing:border-box;border:2px solid #6B9B82;border-radius:12px;background:#FFFCF7;padding:12px 14px;font:400 17px/24px 'Playpen Sans',sans-serif;color:#0F2E22;outline:none;resize:vertical" style-focus="border-color:#1A7A4A;box-shadow:0 0 0 4px rgba(255,205,51,.55)"></textarea>
+        <a href="#m13" style="margin-top:20px;height:60px;border-radius:999px;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 24px 'Lilita One',sans-serif;color:#0F2E22;text-decoration:none">ENVIAR MENSAJE</a>
+        <div style="margin-top:12px;display:flex;align-items:center;justify-content:center;gap:10px;font:500 17px/22px 'Playpen Sans',sans-serif;color:#246F47"><img src="../assets/rays.svg" alt="" style="width:13px">¡Nos encantará leerte!<img src="../assets/rays.svg" alt="" style="width:13px;transform:scaleX(-1)"></div>
+      </form>
+    </div>
+    <img src="../assets/bush-left.png" alt="" style="position:absolute;left:0;bottom:0;width:104px;pointer-events:none">
+    <img src="../assets/bush-right.png" alt="" style="position:absolute;right:0;bottom:0;width:114px;pointer-events:none">
+  </div>
+</div>
+
+<div id="m13" style="display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;align-items:baseline;gap:10px;font:600 15px system-ui,sans-serif"><span style="font:600 12px ui-monospace,Menlo,monospace;padding:3px 8px;background:#FFCD33;color:#0F2E22;border-radius:4px">M13</span><span>Contacto · Mensaje enviado</span></div>
+  <div data-screen-label="M13 Contacto enviado" style="position:relative;width:390px;height:844px;overflow:hidden;background:#FFF8EE;box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(60,50,20,.10)">
+    <dc-import name="PEHeader" variant="mobile" style="display:block;position:relative;width:390px;height:80px;z-index:5" hint-size="390px,80px"></dc-import>
+    <div style="padding:0 20px;display:flex;flex-direction:column;align-items:center;text-align:center">
+      <img src="../assets/mailbox.png" alt="" style="width:220px;margin-top:16px">
+      <div style="margin-top:14px;width:100%;box-sizing:border-box;border:3px solid #1A7A4A;border-radius:22px;background:#E8F5E3;padding:26px 20px 22px;display:flex;flex-direction:column;align-items:center">
+        <span style="width:92px;height:92px;box-sizing:border-box;border:3px solid #0F2E22;border-radius:50%;background:#FFCD33;display:flex;align-items:center;justify-content:center"><svg width="44" height="34" viewBox="0 0 56 44"><path d="M6 22 L21 37 L50 7" stroke="#0F2E22" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        <div style="margin-top:18px;font:400 32px/36px 'Lilita One',sans-serif">¡MENSAJE ENVIADO!</div>
+        <p style="margin:10px 0 0;font:400 18px/26px 'Playpen Sans',sans-serif;text-wrap:pretty">Gracias, Sofía. Leeremos tu mensaje y te responderemos a <b style="font-weight:600">sofia@correo.com</b></p>
+        <a href="#m12" style="margin-top:22px;width:100%;height:58px;border-radius:999px;background:#FFCD33;display:flex;align-items:center;justify-content:center;font:400 21px 'Lilita One',sans-serif;color:#0F2E22;text-decoration:none">ESCRIBIR OTRO MENSAJE</a>
+        <a href="#m01" style="margin-top:14px;font:400 16px 'Lilita One',sans-serif;color:#1F6E44;text-underline-offset:4px">VOLVER AL INICIO</a>
+      </div>
+    </div>
+    <img src="../assets/bush-left.png" alt="" style="position:absolute;left:0;bottom:0;width:104px;pointer-events:none">
+    <img src="../assets/bush-right.png" alt="" style="position:absolute;right:0;bottom:0;width:114px;pointer-events:none">
+  </div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const G = { bg: '#E2F2D7', border: '#1F6E44' }, Y = { bg: '#FCF3D9', border: '#C9B262' }, P = { bg: '#FEDFCF', border: '#DA7A5E' };
+    const plants = [
+      { name: 'GIRASOL', slug: 'girasol', t1: 'Mucho sol', ...Y },
+      { name: 'FRIJOL', slug: 'frijol', t1: 'Crece rápido', ...G },
+      { name: 'CACTUS', slug: 'cactus', t1: 'Poca agua', ...P },
+      { name: 'ALBAHACA', slug: 'albahaca', t1: 'Para comer', ...G },
+      { name: 'SÁBILA', slug: 'sábila', t1: 'Interior', ...G },
+      { name: 'JITOMATE', slug: 'jitomate', t1: 'Para comer', ...P },
+    ];
+    return { plants };
+  }
+}
+</script>
+</body>
+</html>
